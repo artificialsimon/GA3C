@@ -60,7 +60,7 @@ class ProcessAgent(Process):
             r = np.clip(experiences[t].reward, Config.REWARD_MIN, Config.REWARD_MAX)
             reward_sum = discount_factor * reward_sum + r
             experiences[t].reward = reward_sum
-        return experiences[:-1]
+        return experiences[:]
 
     def convert_data(self, experiences):
         x_ = np.array([exp.state for exp in experiences])
@@ -104,7 +104,7 @@ class ProcessAgent(Process):
             experiences.append(exp)
 
             if done or time_count == Config.TIME_MAX:
-                terminal_reward = 0 if done else value
+                terminal_reward = reward if done else value
 
                 updated_exps = ProcessAgent._accumulate_rewards(experiences, self.discount_factor, terminal_reward)
                 x_, r_, a_ = self.convert_data(updated_exps)

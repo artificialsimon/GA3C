@@ -36,6 +36,7 @@ from ProcessStats import ProcessStats
 from ThreadDynamicAdjustment import ThreadDynamicAdjustment
 from ThreadPredictor import ThreadPredictor
 from ThreadTrainer import ThreadTrainer
+import gym_apl
 
 
 class Server:
@@ -63,6 +64,7 @@ class Server:
         self.agents[-1].start()
 
     def remove_agent(self):
+        print(len(self.agents))
         self.agents[-1].exit_flag.value = True
         self.agents[-1].join()
         self.agents.pop()
@@ -72,8 +74,9 @@ class Server:
         self.predictors[-1].start()
 
     def remove_predictor(self):
+        print(self.predictors)
         self.predictors[-1].exit_flag = True
-        self.predictors[-1].join()
+        self.predictors[-1].join(1)
         self.predictors.pop()
 
     def add_trainer(self):
@@ -81,8 +84,9 @@ class Server:
         self.trainers[-1].start()
 
     def remove_trainer(self):
+        print(self.trainers)
         self.trainers[-1].exit_flag = True
-        self.trainers[-1].join()
+        self.trainers[-1].join(1)
         self.trainers.pop()
 
     def train_model(self, x_, r_, a_, trainer_id):
@@ -108,7 +112,7 @@ class Server:
                 trainer.enabled = False
 
         learning_rate_multiplier = (
-                                       Config.LEARNING_RATE_END - Config.LEARNING_RATE_START) / Config.ANNEALING_EPISODE_COUNT
+            Config.LEARNING_RATE_END - Config.LEARNING_RATE_START) / Config.ANNEALING_EPISODE_COUNT
         beta_multiplier = (Config.BETA_END - Config.BETA_START) / Config.ANNEALING_EPISODE_COUNT
 
         while self.stats.episode_count.value < Config.EPISODES:
@@ -130,3 +134,4 @@ class Server:
             self.remove_predictor()
         while self.trainers:
             self.remove_trainer()
+        self.stats.terminate()

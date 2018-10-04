@@ -30,7 +30,7 @@ class Config:
     # Game configuration
 
     # Name of the game, with version (e.g. PongDeterministic-v0)
-    ATARI_GAME = 'PongDeterministic-v0'
+    ATARI_GAME = 'apl-v0'
 
     # Enable to see the trained agent in action
     PLAY_MODE = False
@@ -39,7 +39,7 @@ class Config:
     # Load old models. Throws if the model doesn't exist
     LOAD_CHECKPOINT = False
     # If 0, the latest checkpoint is loaded
-    LOAD_EPISODE = 0 
+    LOAD_EPISODE = 0
 
     #########################################################################
     # Number of agents, predictors, trainers and other system settings
@@ -79,8 +79,8 @@ class Config:
 
     # Input of the DNN
     STACKED_FRAMES = 4
-    IMAGE_WIDTH = 84
-    IMAGE_HEIGHT = 84
+    IMAGE_WIDTH = 6
+    IMAGE_HEIGHT = 5
 
     # Total number of episodes and annealing frequency
     EPISODES = 400000

@@ -70,8 +70,8 @@ class Config:
     TIME_MAX = 5
     
     # Reward Clipping
-    REWARD_MIN = -600
-    REWARD_MAX = 11000
+    REWARD_MIN = -1700
+    REWARD_MAX = 1700
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100

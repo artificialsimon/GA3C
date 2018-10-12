@@ -46,7 +46,7 @@ class Config:
     
     # If the dynamic configuration is on, these are the initial values.
     # Number of Agents
-    AGENTS = 64 
+    AGENTS = 32
     # Number of Predictors
     PREDICTORS = 2
     # Number of Trainers
@@ -67,11 +67,11 @@ class Config:
     DISCOUNT = 0.99
     
     # Tmax
-    TIME_MAX = 5
+    TIME_MAX = 15
     
     # Reward Clipping
-    REWARD_MIN = -1700
-    REWARD_MAX = 1700
+    REWARD_MIN = -1000
+    REWARD_MAX = 1000
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100

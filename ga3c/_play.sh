@@ -1,1 +1,1 @@
-python GA3C.py PLAY_MODE=True
+python GA3C.py PLAY_MODE=True LOAD_EPISODE=${1:-0}

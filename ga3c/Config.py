@@ -46,7 +46,7 @@ class Config:
     
     # If the dynamic configuration is on, these are the initial values.
     # Number of Agents
-    AGENTS = 32 
+    AGENTS = 16
     # Number of Predictors
     PREDICTORS = 2
     # Number of Trainers
@@ -70,8 +70,8 @@ class Config:
     TIME_MAX = 5
     
     # Reward Clipping
-    REWARD_MIN = -1
-    REWARD_MAX = 1
+    REWARD_MIN = -50
+    REWARD_MAX = 30
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100
@@ -79,8 +79,8 @@ class Config:
 
     # Input of the DNN
     STACKED_FRAMES = 4
-    IMAGE_WIDTH = 11
-    IMAGE_HEIGHT = 10
+    IMAGE_WIDTH = 6
+    IMAGE_HEIGHT = 5
 
     # Total number of episodes and annealing frequency
     EPISODES = 400000

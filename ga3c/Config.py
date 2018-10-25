@@ -129,7 +129,7 @@ class Config:
     STAT_ROLLING_MEAN_WINDOW = 1000
 
     # Results filename
-    RESULTS_FILENAME = 'results.txt'
+    RESULTS_FILENAME = 'checkpoints/results.txt'
     # Network checkpoint name
     NETWORK_NAME = 'network'
 

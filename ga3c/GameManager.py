@@ -41,8 +41,8 @@ class GameManager:
         return observation
 
     def step(self, action):
-        self._update_display()
         observation, reward, done, info = self.env.step(action)
+        self._update_display()
         return observation, reward, done, info
 
     def _update_display(self):

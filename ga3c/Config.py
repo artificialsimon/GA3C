@@ -30,7 +30,7 @@ class Config:
     # Game configuration
 
     # Name of the game, with version (e.g. PongDeterministic-v0)
-    ATARI_GAME = 'apl-v0'
+    ATARI_GAME = 'apldrop-v0'
 
     # Enable to see the trained agent in action
     PLAY_MODE = False
@@ -67,20 +67,20 @@ class Config:
     DISCOUNT = 0.99
     
     # Tmax
-    TIME_MAX = 5
+    TIME_MAX = 20
     
     # Reward Clipping
-    REWARD_MIN = -50
-    REWARD_MAX = 30
+    REWARD_MIN = -1.
+    REWARD_MAX = 5.
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100
     PREDICTION_BATCH_SIZE = 128
 
     # Input of the DNN
-    STACKED_FRAMES = 4
-    IMAGE_WIDTH = 11
-    IMAGE_HEIGHT = 10
+    STACKED_FRAMES = 10
+    IMAGE_WIDTH = 12
+    IMAGE_HEIGHT = 11
 
     # Total number of episodes and annealing frequency
     EPISODES = 400000

@@ -30,7 +30,7 @@ class Config:
     # Game configuration
 
     # Name of the game, with version (e.g. PongDeterministic-v0)
-    ATARI_GAME = 'apl-v0'
+    ATARI_GAME = 'PongDeterministic-v0'
 
     # Enable to see the trained agent in action
     PLAY_MODE = False
@@ -79,8 +79,8 @@ class Config:
 
     # Input of the DNN
     STACKED_FRAMES = 4
-    IMAGE_WIDTH = 11
-    IMAGE_HEIGHT = 10
+    IMAGE_WIDTH = 84
+    IMAGE_HEIGHT = 84
 
     # Total number of episodes and annealing frequency
     EPISODES = 400000

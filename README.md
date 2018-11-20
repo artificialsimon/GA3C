@@ -7,6 +7,7 @@ A hybrid CPU/GPU version of the Asynchronous Advantage Actor-Critic (A3C) algori
 * Install [Python > 3.0](https://www.python.org/)
 * Install [TensorFlow 1.0](https://www.tensorflow.org/install/install_linux) 
 * Install [OpenAI Gym](https://github.com/openai/gym)
+* Install [Scikit-image](http://scikit-image.org/docs/dev/install.html)
 * Clone the repo.
 * That's it folks!
 

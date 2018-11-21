@@ -70,8 +70,8 @@ class Config:
     TIME_MAX = 5
     
     # Reward Clipping
-    REWARD_MIN = -1
-    REWARD_MAX = 1
+    REWARD_MIN = -1.
+    REWARD_MAX = 1.
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100
@@ -129,7 +129,7 @@ class Config:
     STAT_ROLLING_MEAN_WINDOW = 1000
 
     # Results filename
-    RESULTS_FILENAME = 'results.txt'
+    RESULTS_FILENAME = 'checkpoints/results.txt'
     # Network checkpoint name
     NETWORK_NAME = 'network'
 

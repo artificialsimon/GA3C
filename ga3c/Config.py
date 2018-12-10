@@ -37,7 +37,7 @@ class Config:
     # Enable to train
     TRAIN_MODELS = True
     # Load old models. Throws if the model doesn't exist
-    LOAD_CHECKPOINT = False
+    LOAD_CHECKPOINT = True
     # If 0, the latest checkpoint is loaded
     LOAD_EPISODE = 0
 
@@ -67,11 +67,11 @@ class Config:
     DISCOUNT = 0.99
     
     # Tmax
-    TIME_MAX = 20
+    TIME_MAX = 5
     
     # Reward Clipping
     REWARD_MIN = -1.
-    REWARD_MAX = 5.
+    REWARD_MAX = 1.
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100
@@ -79,8 +79,8 @@ class Config:
 
     # Input of the DNN
     STACKED_FRAMES = 10
-    IMAGE_WIDTH = 12
-    IMAGE_HEIGHT = 11
+    IMAGE_WIDTH = 96
+    IMAGE_HEIGHT = 88
 
     # Total number of episodes and annealing frequency
     EPISODES = 400000

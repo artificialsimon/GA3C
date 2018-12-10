@@ -93,7 +93,7 @@ class ProcessAgent(Process):
         while not done:
             # very first few frames
             if self.env.current_state is None:
-                self.env.step(None)  # 0 == NOOP
+                self.env.step(-1)  # 0 == NOOP
                 continue
 
             prediction, value = self.predict(self.env.current_state)

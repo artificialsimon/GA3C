@@ -54,7 +54,7 @@ class Environment:
 
     @staticmethod
     def _preprocess(image):
-        image = Environment._rgb2gray(image)
+        #image = Environment._rgb2gray(image)
         image = misc.imresize(image, [Config.IMAGE_HEIGHT, Config.IMAGE_WIDTH], 'bilinear')
         image = image.astype(np.float32) / 128.0 - 1.0
         return image

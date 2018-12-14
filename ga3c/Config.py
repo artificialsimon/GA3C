@@ -37,7 +37,7 @@ class Config:
     # Enable to train
     TRAIN_MODELS = True
     # Load old models. Throws if the model doesn't exist
-    LOAD_CHECKPOINT = False
+    LOAD_CHECKPOINT = True
     # If 0, the latest checkpoint is loaded
     LOAD_EPISODE = 0
 
@@ -67,11 +67,11 @@ class Config:
     DISCOUNT = 0.99
     
     # Tmax
-    TIME_MAX = 5
+    TIME_MAX = 10
     
     # Reward Clipping
     REWARD_MIN = -1.
-    REWARD_MAX = 1.
+    REWARD_MAX = 10.
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100
@@ -83,8 +83,8 @@ class Config:
     IMAGE_HEIGHT = 88
 
     # Total number of episodes and annealing frequency
-    EPISODES = 400000
-    ANNEALING_EPISODE_COUNT = 400000
+    EPISODES = 2400000
+    ANNEALING_EPISODE_COUNT = 2400000
 
     # Entropy regualrization hyper-parameter
     BETA_START = 0.01

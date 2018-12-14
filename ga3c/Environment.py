@@ -32,6 +32,7 @@ else:
 
 import numpy as np
 import scipy.misc as misc
+from skimage.transform import resize
 
 from Config import Config
 from GameManager import GameManager
@@ -56,6 +57,7 @@ class Environment:
     def _preprocess(image):
         image = Environment._rgb2gray(image)
         #image = misc.imresize(image, [Config.IMAGE_HEIGHT, Config.IMAGE_WIDTH], 'bilinear')
+        image = resize(image, [Config.IMAGE_HEIGHT, Config.IMAGE_WIDTH])
         image = image.astype(np.float32) / 128.0 - 1.0
         return image
 

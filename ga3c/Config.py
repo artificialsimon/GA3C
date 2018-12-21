@@ -71,7 +71,7 @@ class Config:
     
     # Reward Clipping
     REWARD_MIN = -1.
-    REWARD_MAX = 120.
+    REWARD_MAX = 10.
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100

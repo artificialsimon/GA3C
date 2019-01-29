@@ -244,7 +244,8 @@ class NetworkVP:
         self.log_writer.add_summary(summary, step)
 
     def _checkpoint_filename(self, episode):
-        return 'checkpoints/%s_%08d' % (self.model_name, episode)
+        return Config.SAVE_DIRECTORY + '/%s_%08d' % (self.model_name, episode)
+        #return  'checkpoints/%s_%08d' % (self.model_name, episode)
     
     def _get_episode_from_filename(self, filename):
         # TODO: hacky way of getting the episode. ideally episode should be stored as a TF variable

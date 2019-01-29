@@ -67,7 +67,7 @@ class Config:
     DISCOUNT = 0.99
     
     # Tmax
-    TIME_MAX = 10
+    TIME_MAX = 5
     
     # Reward Clipping
     REWARD_MIN = -1.
@@ -83,8 +83,8 @@ class Config:
     IMAGE_HEIGHT = 88
 
     # Total number of episodes and annealing frequency
-    EPISODES = 2400000
-    ANNEALING_EPISODE_COUNT = 2400000
+    EPISODES = 10000
+    ANNEALING_EPISODE_COUNT = 10000
 
     # Entropy regualrization hyper-parameter
     BETA_START = 0.01
@@ -129,7 +129,8 @@ class Config:
     STAT_ROLLING_MEAN_WINDOW = 1000
 
     # Results filename
-    RESULTS_FILENAME = 'checkpoints/results.txt'
+    SAVE_DIRECTORY = 'checkpointstimemax5/'
+    RESULTS_FILENAME = '/results.txt'
     # Network checkpoint name
     NETWORK_NAME = 'network'
 

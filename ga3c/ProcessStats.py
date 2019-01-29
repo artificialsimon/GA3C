@@ -60,7 +60,7 @@ class ProcessStats(Process):
         return np.ceil(self.training_count.value / (time.time() - self.start_time))
 
     def run(self):
-        with open(Config.RESULTS_FILENAME, 'a') as results_logger:
+        with open(Config.SAVE_DIRECTORY + Config.RESULTS_FILENAME, 'a') as results_logger:
             rolling_frame_count = 0
             rolling_reward = 0
             results_q = queueQueue(maxsize=Config.STAT_ROLLING_MEAN_WINDOW)

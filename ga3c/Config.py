@@ -67,24 +67,24 @@ class Config:
     DISCOUNT = 0.99
     
     # Tmax
-    TIME_MAX = 5
+    TIME_MAX = 10
     
     # Reward Clipping
     REWARD_MIN = -1.
-    REWARD_MAX = 10.
+    REWARD_MAX = 100.
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100
     PREDICTION_BATCH_SIZE = 128
 
     # Input of the DNN
-    STACKED_FRAMES = 10
+    STACKED_FRAMES = 4
     IMAGE_WIDTH = 96
     IMAGE_HEIGHT = 88
 
     # Total number of episodes and annealing frequency
-    EPISODES = 10000
-    ANNEALING_EPISODE_COUNT = 10000
+    EPISODES = 1500000
+    ANNEALING_EPISODE_COUNT = 1500000
 
     # Entropy regualrization hyper-parameter
     BETA_START = 0.01
@@ -116,7 +116,7 @@ class Config:
     # Enable TensorBoard
     TENSORBOARD = False
     # Update TensorBoard every X training steps
-    TENSORBOARD_UPDATE_FREQUENCY = 1000
+    TENSORBOARD_UPDATE_FREQUENCY = 10000
 
     # Enable to save models every SAVE_FREQUENCY episodes
     SAVE_MODELS = True
@@ -124,12 +124,12 @@ class Config:
     SAVE_FREQUENCY = 1000
     
     # Print stats every PRINT_STATS_FREQUENCY episodes
-    PRINT_STATS_FREQUENCY = 1
+    PRINT_STATS_FREQUENCY = 100
     # The window to average stats
     STAT_ROLLING_MEAN_WINDOW = 1000
 
     # Results filename
-    SAVE_DIRECTORY = 'checkpointstimemax5/'
+    SAVE_DIRECTORY = 'checkpoints/'
     RESULTS_FILENAME = '/results.txt'
     # Network checkpoint name
     NETWORK_NAME = 'network'

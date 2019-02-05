@@ -67,11 +67,11 @@ class Config:
     DISCOUNT = 0.99
     
     # Tmax
-    TIME_MAX = 10
+    TIME_MAX = 6
     
     # Reward Clipping
     REWARD_MIN = -1.
-    REWARD_MAX = 100.
+    REWARD_MAX = 1.
 
     # Max size of the queue
     MAX_QUEUE_SIZE = 100
@@ -79,8 +79,8 @@ class Config:
 
     # Input of the DNN
     STACKED_FRAMES = 4
-    IMAGE_WIDTH = 96
-    IMAGE_HEIGHT = 88
+    IMAGE_WIDTH = 168
+    IMAGE_HEIGHT = 168
 
     # Total number of episodes and annealing frequency
     EPISODES = 1500000
@@ -116,17 +116,17 @@ class Config:
     # Enable TensorBoard
     TENSORBOARD = False
     # Update TensorBoard every X training steps
-    TENSORBOARD_UPDATE_FREQUENCY = 10000
+    TENSORBOARD_UPDATE_FREQUENCY = 1000
 
     # Enable to save models every SAVE_FREQUENCY episodes
     SAVE_MODELS = True
     # Save every SAVE_FREQUENCY episodes
-    SAVE_FREQUENCY = 1000
+    SAVE_FREQUENCY = 10000
     
     # Print stats every PRINT_STATS_FREQUENCY episodes
     PRINT_STATS_FREQUENCY = 100
     # The window to average stats
-    STAT_ROLLING_MEAN_WINDOW = 1000
+    STAT_ROLLING_MEAN_WINDOW = 100
 
     # Results filename
     SAVE_DIRECTORY = 'checkpoints/'
